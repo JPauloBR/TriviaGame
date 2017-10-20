@@ -76,7 +76,7 @@ function selectQuestion() {
 		console.log("questions: "+ questions.length);
 	}
 
-	//showing final result after all questions answered
+	//showing final result after all questions
 	else {
 		$('#final-result').modal('toggle');
 		$('#correct-final').text('Correct: ' + correct);
