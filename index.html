@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trivia Game</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<body>
+	<div id="main-div">
+
+		<div class="jumbotron text-center">
+		  <h1 class="display-3">JP's Trivia Game!</h1>
+		  <p class="lead">You have one Minute to answer each question.</p>
+		  <hr class="my-4">
+		  <p>Simply hover the mouse over the rigth answer and click on it</p>
+		  <p class="lead">
+		    <a class="btn btn-primary btn-lg" id="start-button" href="#" role="button">Start</a>
+		  </p>
+		</div>
+
+		<div class="modal fade bd-example-modal-lg question-modals" id="firstq" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+		  <div class="modal-dialog modal-lg">
+		    <div class="modal-content">
+		        	<div class="card bg-light text-gray-dark mb-2">
+				  		<h1 class="card-header text-right timer">00:00</h1>
+				  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/greek-goddess.jpg" alt="greek-goddess">
+				  		<div class="card-body">
+					  		<h2 class="card-title">The belief in more than one god is called:</h2>
+					  		
+					  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">a) None of the below</a>
+					  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">b) Polytheism</a>
+					  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) Monotheism</a>
+					  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) Omnism</a>
+					  		
+				  		</div>
+				  	</div>
+				  </div>
+		    </div>
+		 </div>
+
+	  <div class="modal fade bd-example-modal-lg question-modals" id="secondq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+	    <div class="modal-dialog modal-lg">
+	      <div class="modal-content">
+	          	<div class="card bg-light text-gray-dark mb-2">
+	          			  		  		<h1 class="card-header text-right timer">00:00</h1>
+	          			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/FlagofUSAamericanflag.jpg" alt="greek-goddess">
+	          			  		  		<div class="card-body">
+	          			  			  		<h2 class="card-title">how many stars does the american flag has?</h2>
+	          			  			  	
+	          			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">a) 50</a>
+	          			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) 49</a>
+	          			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) 51</a>
+	          			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) 48</a>
+	          			  			  		
+	          			  		  		</div>
+	          			  		  	</div>
+	          			  		  </div>
+	      </div>
+	    </div>
+
+	    <div class="modal fade bd-example-modal-lg question-modals" id="thirdq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+	      <div class="modal-dialog modal-lg">
+	        <div class="modal-content">
+	            	<div class="card bg-light text-gray-dark mb-2">
+	            			  		  		<h1 class="card-header text-right timer">00:00</h1>
+	            			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/FlagofUSAamericanflag.jpg" alt="greek-goddess">
+	            			  		  		<div class="card-body">
+	            			  			  		<h2 class="card-title">when did the united states became a country?</h2>
+	            			  			  		
+	            			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">a) July 4th 1774</a>
+	            			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) July 4th 1674</a>
+	            			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">c) July 4th 1776</a>
+	            			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) None of the above</a>
+	            			  			  		
+	            			  		  		</div>
+	            			  		  	</div>
+	            			  		  </div>
+	        </div>
+	     </div>
+
+      <div class="modal fade bd-example-modal-lg question-modals" id="fourthq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              	<div class="card bg-light text-gray-dark mb-2">
+              			  		  		<h1 class="card-header text-right timer">00:00</h1>
+              			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/Boom-In-The-Air.jpg" alt="greek-goddess">
+              			  		  		<div class="card-body">
+              			  			  		<h2 class="card-title">Jets that go faster than the speed of sound are called:</h2>
+              			  			  		
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">a) Supersonic</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) Sonic</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) Hypersonic</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) Ultrasonic</a>
+              			  			  		
+              			  		  		</div>
+              			  		  	</div>
+              			  		  </div>
+          </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg question-modals" id="fifthq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                	<div class="card bg-light text-gray-dark mb-2">
+                			  		  		<h1 class="card-header text-right timer">00:00</h1>
+                			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/ancient-paper.jpg" alt="greek-goddess">
+                			  		  		<div class="card-body">
+                			  			  		<h2 class="card-title">Where Paper was invented 2000 years ago?</h2>
+                			  			  		
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">a) Egypt</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">b) China</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) Atlantis</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) Japan</a>
+                			  			  		
+                			  		  		</div>
+                			  		  	</div>
+                			  		  </div>
+                </div>
+            </div>
+         </div>
+
+      <div class="modal fade bd-example-modal-lg question-modals" id="sixthq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              	<div class="card bg-light text-gray-dark mb-2">
+              			  		  		<h1 class="card-header text-right timer">00:00</h1>
+              			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/brown-bear-grizzly.jpg" alt="greek-goddess">
+              			  		  		<div class="card-body">
+              			  			  		<h2 class="card-title">John lives in a house with four walls on the north. A bear approaches the house. What color is the bear?</h2>
+              			  			  		
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">a) White</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) Brown</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) Black</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) None of the above</a>
+              			  			  		
+              			  		  		</div>
+              			  		  	</div>
+              			  		  </div>
+          </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg question-modals" id="seventhq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                	<div class="card bg-light text-gray-dark mb-2">
+                			  		  		<h1 class="card-header text-right timer">00:00</h1>
+                			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/water-boiling.jpg" alt="greek-goddess">
+                			  		  		<div class="card-body">
+                			  			  		<h2 class="card-title">At what temperature does water boil on the celsius scale</h2>
+                			  			  		
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong" data-answer="wrong">a) 50 degrees</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) 40 degrees</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) 120 degrees</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">d) 100 degrees</a>
+                			  			  		
+                			  		  		</div>
+                			  		  	</div>
+                			  		  </div>
+            </div>
+        </div>
+
+      <div class="modal fade bd-example-modal-lg question-modals" id="eightq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+              	<div class="card bg-light text-gray-dark mb-2">
+              			  		  		<h1 class="card-header text-right timer">00:00</h1>
+              			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/match.jpg" alt="greek-goddess">
+              			  		  		<div class="card-body">
+              			  			  		<h2 class="card-title">If you only have a match and You enter in a dark room with a diesel heater, a fueled lamp and a candle. Which one you should light first?</h2>
+              			  			  		
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">a) Heater</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) Candle</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) Lamp</a>
+              			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">d) None of the above</a>
+              			  			  		
+              			  		  		</div>
+              			  		  	</div>
+              			  		  </div>
+          </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg question-modals" id="ninthq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                	<div class="card bg-light text-gray-dark mb-2">
+                			  		  		<h1 class="card-header text-right timer">00:00</h1>
+                			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/stars.jpg" alt="greek-goddess">
+                			  		  		<div class="card-body">
+                			  			  		<h2 class="card-title">What is the Earth's closest star?</h2>
+                			  			  		
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">a) Sirius (a canis majoris)</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) Barnard Star</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">c) Sun</a>
+                			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">d) Alpha Centuri</a>
+                			  			  		
+                			  		  		</div>
+                			  		  	</div>
+                			  		  </div>
+            </div>
+         </div>
+
+         <div class="modal fade bd-example-modal-lg question-modals" id="tenthq" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  	<div class="card bg-light text-gray-dark mb-2">
+                  			  		  		<h1 class="card-header text-right timer">00:00</h1>
+                  			  		  		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/calendar.jpg" alt="greek-goddess">
+                  			  		  		<div class="card-body">
+                  			  			  		<h2 class="card-title">Some Months have 31 days, others 30 days. How many months have 28 days?</h2>
+                  			  			  		
+                  			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">a) One</a>
+                  			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">b) Five</a>
+                  			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="wrong">c) Two</a>
+                  			  			  			<a class="list-group-item btn btn-primary btn-lg btn-select" data-dismiss="modal" data-answer="right">d) None of the above</a>
+                  			  			  		
+                  			  		  		</div>
+                  			  		  	</div>
+                  			  		  </div>
+              </div>
+          </div>
+
+
+          <div class="modal fade bd-example-modal-lg trans-modals" id="correct-answer" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-dismiss="modal" data-backdrop="static">
+             <div class="modal-dialog modal-lg">
+               <div class="modal-content bg-success" data-dismiss="modal">
+               	<div class="card-title">
+               		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               		          <span aria-hidden="true">&times;</span>
+               		</button>
+               	</div>
+                   	<div class="card bg-success text-white text-center">
+                   		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/right.jpg" alt="right">
+                   		<div class="card-body">
+                   			<br> <br> <br><br> <br> <br>
+                 	  		<h1 class="card-title">Correct Answer!</h1>
+                 	  		<br> <br> <br><br> <br> <br>
+     
+                   		</div>
+                   	</div>
+                   </div>
+               </div>
+           </div>
+
+           <div class="modal fade bd-example-modal-lg trans-modals" id="wrong-answer" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-dismiss="modal" data-backdrop="static">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content bg-danger" data-dismiss="modal">
+                	<div class="card-title">
+                		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                		          <span aria-hidden="true">&times;</span>
+                		</button>
+                	</div>
+                    	<div class="card bg-danger text-white text-center">
+                    		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/Wrong.jpg" alt="Wrong">
+                    		<div class="card-body">
+                    			<br> <br> <br><br> <br> <br>
+                  	  		<h1 class="card-title">Wrong Answer!</h1>
+                  	  		<br> <br> <br><br> <br> <br>
+                    		</div>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade bd-example-modal-lg trans-modals" id="unanswered-modal" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-dismiss="modal" data-backdrop="static">
+               <div class="modal-dialog modal-lg">
+                 <div class="modal-content bg-warning" data-dismiss="modal">
+                 	<div class="card-title">
+                 		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 		          <span aria-hidden="true">&times;</span>
+                 		</button>
+                 	</div>
+                     	<div class="card bg-warning text-white text-center">
+                     		<img class="card-img-top w-50 img-thumbnail rounded text-center" src="assets/images/stopwatch.jpg" alt="Wrong">
+                     		<div class="card-body">
+                     			<br> <br> <br><br> <br> <br>
+                   	  		<h1 class="card-title">Time's UP!</h1>
+                   	  		<br> <br> <br><br> <br> <br>
+                     		</div>
+                     	</div>
+                     </div>
+                 </div>
+             </div>
+
+            <div class="modal fade bd-example-modal-lg" id="final-result" tabindex="-1" role="dialog" aria-labelledby="mylgallModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+               <div class="modal-dialog modal-lg">
+                 <div class="modal-content">
+                     	<div class="card bg-light text-gray-dark">
+                     		<img class="card-img-top w-50 img-thumbnail rounded img-fluid"  src="assets/images/youre-awsome.jpg" alt="greek-goddess">
+                     		<div class="card-body text-center">
+	                   	  		<h2 class="card-title">Game Over</h2>
+	                   	  		<ul class="list-group list-group-flush">
+	                   	  			<li class="list-group-item text-left" id="correct-final">Correct: </li>
+	                   	  			<li class="list-group-item text-left" id="unanswered-final">Unanswered: </li>
+	                   	  			<li class="list-group-item text-left" id="wrong-final">Wrong: </li>
+	                   	  			
+	                   	  		</ul>
+	                   	  		<input class="btn btn-primary mt-5" data-dismiss="modal" type="reset" value="Reset" id="reset-button">
+                     		</div>
+                     	</div>
+                     </div>
+                 </div>
+             </div>
+	</div>
+
+
+
+	<div class="progress">
+<!-- 	  <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+	  <div class="progress-bar bg-warning" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div> -->
+	</div>
+
+
+
+
+
+
+
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
